@@ -84,7 +84,6 @@ const NUM_ROLLS = 3;
 		}
 	}
 	
-
 	doScore(rulename, ruleFn) 
 	{
 		if( !this.state.scores.rulename )
@@ -117,6 +116,7 @@ const NUM_ROLLS = 3;
 
 	render() 
 	{
+		const { dice, locked, rollsLeft, rolling, scores } = this.state;
 		return (
 			<div className='Game'>
 				<header className='Game-header'>
@@ -124,10 +124,10 @@ const NUM_ROLLS = 3;
 
 					<section className='Game-dice-section'>
 						<Dice
-							dice={ this.state.dice }
-							locked={ this.state.locked }
-							disabled={ this.state.rollsLeft === 0 }
-							rolling={ this.state.rolling }
+							dice={ dice }
+							locked={ locked }
+							disabled={ rollsLeft === 0 }
+							rolling={ rolling }
 							toggleLocked={ this.toggleLocked }
 						/>
 						<div className='Game-button-wrapper'>
@@ -136,9 +136,9 @@ const NUM_ROLLS = 3;
 								// disable every button thats true or if there are no dice rolls left
 								disabled=
 								{	// Disabled when:
-									this.state.locked.every(x => x) || // all dice are locked
-									this.state.rollsLeft === 0 || // when there are zero rolls left
-									this.state.rolling // when the dice are rolling
+									locked.every(x => x) || // all dice are locked
+									rollsLeft === 0 || // when there are zero rolls left
+									rolling // when the dice are rolling
 								}
 								onClick={ this.animateRoll }
 							>
@@ -147,7 +147,7 @@ const NUM_ROLLS = 3;
 						</div>
 					</section>
 				</header>
-				<ScoreTable doScore={this.doScore} scores={this.state.scores} />
+				<ScoreTable doScore={this.doScore} scores={ scores } />
 			</div>
 		);
 	}
