@@ -103,6 +103,18 @@ const NUM_ROLLS = 3;
 		}
 	}
 
+	displayRollInfo()
+	{
+		// Done in reverse order so we can used the this.state.rollsLeft array to match it
+		const messages = [
+			"0 Rolls Left",
+			"1 Roll Left",
+			"2 Rolls Left",
+			"Starting Round"
+		];
+		return messages[this.state.rollsLeft];
+	}
+
 	render() 
 	{
 		return (
@@ -125,7 +137,7 @@ const NUM_ROLLS = 3;
 								disabled={ this.state.locked.every(x => x) || this.state.rollsLeft === 0 }
 								onClick={ this.animateRoll }
 							>
-								{ this.state.rollsLeft } Rerolls Left
+								{ this.displayRollInfo() }
 							</button>
 						</div>
 					</section>
