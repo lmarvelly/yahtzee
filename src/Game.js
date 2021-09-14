@@ -134,7 +134,12 @@ const NUM_ROLLS = 3;
 							<button
 								className='Game-reroll'
 								// disable every button thats true or if there are no dice rolls left
-								disabled={ this.state.locked.every(x => x) || this.state.rollsLeft === 0 }
+								disabled=
+								{	// Disabled when:
+									this.state.locked.every(x => x) || // all dice are locked
+									this.state.rollsLeft === 0 || // when there are zero rolls left
+									this.state.rolling // when the dice are rolling
+								}
 								onClick={ this.animateRoll }
 							>
 								{ this.displayRollInfo() }
