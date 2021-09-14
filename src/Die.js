@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiceOne, faDiceTwo, faDiceThree, faDiceFour, faDiceFive, faDiceSix } from '@fortawesome/free-solid-svg-icons';
-import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import "./Die.css";
 
@@ -44,7 +43,7 @@ class Die extends Component
 					className={ classes } 
 					disabled={ disabled }
 					icon={ thisIcon } 
-					size="3x"
+					size="4x"
 					onClick={ this.handleClick }
 				/>
 		);}

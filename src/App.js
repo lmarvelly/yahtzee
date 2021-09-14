@@ -1,15 +1,22 @@
 import React, { Component } from "react";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
 import Game from "./Game";
 import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className='App'>
-        <Game />
-      </div>
-    );
-  }
+config.autoAddCss = false;
+
+class App extends Component 
+{
+	render() 
+	{
+		return (
+			<div className='App'>
+			<Game />
+			</div>
+		);
+	}
 }
 
 export default App;
