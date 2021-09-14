@@ -41,6 +41,12 @@ const NUM_ROLLS = 3;
 		this.toggleLocked = this.toggleLocked.bind( this );
 	}
 
+	// Load function when component is loaded
+	componentDidMount()
+	{
+		this.animateRoll();
+	}
+
 	animateRoll()
 	{
 		this.setState({ rolling: true }, () => {
@@ -64,7 +70,7 @@ const NUM_ROLLS = 3;
 	toggleLocked(idx) 
 	{
 		// toggle whether idx is in locked or not
-		if ( this.state.rollsLeft > 0 )
+		if ( this.state.rollsLeft > 0 && !this.state.rolling )
 		{
 			this.setState(st => (
 				{
@@ -93,7 +99,7 @@ const NUM_ROLLS = 3;
 				rollsLeft: NUM_ROLLS,
 				locked: Array(NUM_DICE).fill(false)
 			}));
-			this.roll();
+			this.animateRoll();
 		}
 	}
 

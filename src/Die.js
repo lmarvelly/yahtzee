@@ -12,7 +12,8 @@ class Die extends Component
 		diceIcons: 
 		[
 			faDiceOne, faDiceTwo, faDiceThree, faDiceFour, faDiceFive, faDiceSix
-		]
+		],
+		val: 6 // Need this initial value at the beginning otherwise there's nothing to animate
 	}
 
 	constructor( props )
@@ -34,7 +35,7 @@ class Die extends Component
 		const thisIcon = this.props.diceIcons[ val  - 1 ];
 		let classes = 'Die';
 		if( locked ) classes += ' Die-locked';
-		if( rolling ) classes += ' spin';
+		if( rolling && !locked ) classes += ' spin';
 
 		if( this.props.val !== undefined )
 		{

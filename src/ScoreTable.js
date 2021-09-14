@@ -10,6 +10,8 @@ class ScoreTable extends Component
 	{
 		const { scores, doScore } = this.props;
 
+		totalScore();
+
 		return (
 			<div className="ScoreTable">
 				<section className="ScoreTable-section">
