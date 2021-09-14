@@ -1,0 +1,107 @@
+/* Original Styles For Numbers, before icons added in */
+/* .Die {
+  font-size: 25px;
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  margin-right: 1em;
+} */
+
+/* THE NICER STYLES MADE FOR THE FONT-AWESOME ICONS... */
+
+.Die {
+	color: white;
+	border-radius: 2px;
+	/* h-offset v-offset blur spread color |inset|initial|inherit */
+	
+	box-shadow:0 0 0 rgba(0, 0, 0, 0.3),  0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+	
+	/* Animation */
+	transition: all 0.3s ease;
+
+	/* Trying to get the shadow to work */
+	/* background-color: black;
+	box-shadow: 1px 1px black;
+	box-shadow: 2px 2px 0 1px black; */
+}
+
+.Die-locked {
+  opacity: 0.5;
+  text-shadow: none;
+}
+
+.Die:not(.Die-locked):hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.Die-rolling 
+{
+	animation: spin 1s ease-out;
+}
+
+.Die-rolling:hover,
+.Die[disabled] 
+{
+  	cursor: not-allowed;
+}
+
+.spin
+{
+	animation: spin 1s ease-out;
+}
+
+/* Spin Animation Class */
+@keyframes spin 
+{
+	0% 
+	{
+		transform: rotate(0deg);
+	}
+	100% 
+	{
+		transform: rotate(360deg);
+	}
+}
+
+/* Shaking Animation Class */
+/* .shaking
+{
+	animation-name: wobble;
+	animation-duration: 1s;
+}
+
+@keyframes wobble 
+{
+   0% 
+	{ 
+		transform: translateX(0%); 
+	} 
+   15% 
+	{ 
+		transform: translateX(-25%) rotate(-5deg); 
+	} 
+   30% 
+	{
+		transform: translateX(20%) rotate(3deg);
+	} 
+   45% 
+	{ 
+		transform: translateX(-15%) rotate(-3deg); 
+	} 
+   60% 
+	{ 
+		transform: translateX(10%) rotate(2deg); 
+	}
+   75% 
+	{
+		transform: translateX(-5%) rotate(-1deg); 
+	}
+   100% 
+	{ 
+		transform: translateX(0%); 
+	} 
+}  */
