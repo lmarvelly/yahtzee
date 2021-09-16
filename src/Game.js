@@ -2,18 +2,21 @@ import React, { Component } from "react";
 import Dice from "./Dice";
 import ScoreTable from "./ScoreTable";
 import "./Game.css";
+import "./Animation.css";
 
 const NUM_DICE = 5;
 const NUM_ROLLS = 3;
 
-	class Game extends Component 
-	{
+class Game extends Component 
+{
 	constructor(props) 
 	{
 		super(props);
 		this.state = 
 		{
 			dice: Array.from({ length: NUM_DICE }),
+			isLoaded: false,
+			fadeOut: false,
 			locked: Array(NUM_DICE).fill(false),
 			rollsLeft: NUM_ROLLS,
 			rolling: false,
@@ -44,12 +47,20 @@ const NUM_ROLLS = 3;
 	// Load function when component is loaded
 	componentDidMount()
 	{
-		this.animateRoll();
+		setTimeout(() => 
+		{
+			this.setState(
+			{
+				isLoaded: true
+			}),
+			this.animateRoll();
+		}, 3000);
 	}
 
 	animateRoll()
 	{
-		this.setState({ rolling: true }, () => {
+		this.setState({ rolling: true }, () => 
+		{
 			setTimeout( this.roll, 1000 );
 		});
 	}
@@ -117,9 +128,10 @@ const NUM_ROLLS = 3;
 	render() 
 	{
 		const { dice, locked, rollsLeft, rolling, scores } = this.state;
-		return (
+
+		const app = 
 			<div className='Game'>
-				<header className='Game-header'>
+				<header className='Game-header fadeIn'>
 					<h1 className='App-title'>Yahtzee!</h1>
 
 					<section className='Game-dice-section'>
@@ -148,7 +160,15 @@ const NUM_ROLLS = 3;
 					</section>
 				</header>
 				<ScoreTable doScore={this.doScore} scores={ scores } />
-			</div>
+			</div>;
+
+		const loader = <div className='loader'></div>
+
+		return (
+			this.state.isLoaded ?
+				app
+				:
+				loader
 		);
 	}
 }
