@@ -39,21 +39,7 @@
 
 .fadeIn
 {
-	/* animation: fadeIn ease 3s;
-   animation-iteration-count: 1;
-   animation-fill-mode: forwards;
-	-webkit-animation-name: fadeIn;
-	animation-name: fadeIn;
-
-
-	animation: fadeIn 1.5s linear 0s forwards */
-
-	/* animation: fadeIn ease 3s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards; */
 	animation: fadeIn 1.5s linear;
-	-webkit-animation-name: fadeIn;
-	animation-name: fadeIn;
 }
 
 /* FADE OUT ANIMATION */
