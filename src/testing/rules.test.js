@@ -175,3 +175,21 @@ test(`Yahtzee: 5 of the same, returns 50 points`, () =>
 	expect(result5).toEqual(50);
 	expect(result6).toEqual(50);
 });
+
+test(`Change: Adds the total of all the rolled dice`, () =>
+{
+	const result1 = chance.evalRoll(diceCombo1);
+	const result2 = chance.evalRoll(diceCombo7);
+	const result3 = chance.evalRoll(diceCombo8);
+	const result4 = chance.evalRoll(diceCombo9);
+	const result5 = chance.evalRoll(diceCombo6);
+	const result6 = chance.evalRoll(diceCombo10);
+
+	expect(result1).toEqual(7);
+	expect(result2).toEqual(12);
+	expect(result3).toEqual(15);
+	expect(result4).toEqual(19);
+	expect(result5).toEqual(5);
+	expect(result6).toEqual(15);
+});
+
