@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Dice from "./Dice";
+import Dice from "./components/Dice";
 import ScoreTable from "./ScoreTable";
 import "./Game.css";
 import "./Animation.css";

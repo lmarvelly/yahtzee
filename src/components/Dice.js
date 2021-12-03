@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Die from './Die';
-import './Dice.css';
+import './../styles/Dice.css';
 
 class Dice extends Component 
 {

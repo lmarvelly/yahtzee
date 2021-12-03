@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiceOne, faDiceTwo, faDiceThree, faDiceFour, faDiceFive, faDiceSix } from '@fortawesome/free-solid-svg-icons';
 
-import "./Die.css";
+import "./../styles/Die.css";
 
 class Die extends Component 
 {
