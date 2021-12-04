@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-import Game from "./Game";
+import Game from "./components/Game";
 import "./App.css";
 
 config.autoAddCss = false;

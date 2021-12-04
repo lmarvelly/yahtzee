@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Dice from "./components/Dice";
-import ScoreTable from "./ScoreTable";
-import "./Game.css";
-import "./styles/animation/Animation.css";
+import Dice from "./Dice";
+import ScoreTable from "../ScoreTable";
+import "../styles/components/Game.css";
+import "../styles/animation/Animation.css";
 
 const NUM_DICE = 5;
 const NUM_ROLLS = 3;
