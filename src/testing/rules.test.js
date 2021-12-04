@@ -1,4 +1,4 @@
-import { ones, twos, threes, fours, fives, sixes, threeOfKind, fourOfKind, fullHouse, smallStraight, largeStraight, yahtzee, chance } from '../Rules';
+import { ones, twos, threes, fours, fives, sixes, threeOfKind, fourOfKind, fullHouse, smallStraight, largeStraight, yahtzee, chance } from '../functions/Rules';
 
 /**
  * @constant diceCombo1 [1, 1, 1, 2, 2]
