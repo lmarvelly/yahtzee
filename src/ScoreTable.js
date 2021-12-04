@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RuleRow from './components/RuleRow';
 import './ScoreTable.css';
-import './Animation.css';
+import './styles/animation/Animation.css';
 import { ones, twos, threes, fours, fives, sixes, threeOfKind, fourOfKind, fullHouse, smallStraight, largeStraight, yahtzee, chance } from './Rules';
 
 

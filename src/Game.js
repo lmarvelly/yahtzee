@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Dice from "./components/Dice";
 import ScoreTable from "./ScoreTable";
 import "./Game.css";
-import "./Animation.css";
+import "./styles/animation/Animation.css";
 
 const NUM_DICE = 5;
 const NUM_ROLLS = 3;
