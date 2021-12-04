@@ -3,7 +3,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 import Game from "./components/Game";
-import "./App.css";
+import "./styles/App.css";
 
 config.autoAddCss = false;
 
