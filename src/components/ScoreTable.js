@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import RuleRow from './components/RuleRow';
-import './ScoreTable.css';
-import './styles/animation/Animation.css';
-import { ones, twos, threes, fours, fives, sixes, threeOfKind, fourOfKind, fullHouse, smallStraight, largeStraight, yahtzee, chance } from './functions/Rules';
+import RuleRow from './RuleRow';
+import '../styles/components/ScoreTable.css';
+import '../styles/animation/Animation.css';
+import { ones, twos, threes, fours, fives, sixes, threeOfKind, fourOfKind, fullHouse, smallStraight, largeStraight, yahtzee, chance } from '../functions/Rules';
 
 
 class ScoreTable extends Component 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Dice from "./Dice";
-import ScoreTable from "../ScoreTable";
+import ScoreTable from "./ScoreTable";
 import "../styles/components/Game.css";
 import "../styles/animation/Animation.css";
 
